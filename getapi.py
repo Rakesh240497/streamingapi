@@ -2,6 +2,7 @@ import requests
 import json
 import time
 
+print("Hello Everyone")
 def subscribe_and_process_data():
     url = 'http://127.0.0.1:5000/stream-items'  # Flask API endpoint
 
