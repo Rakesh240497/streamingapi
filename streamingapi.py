@@ -33,9 +33,9 @@ def stream_items():
             
             # Yield the data in SSE format
             yield f"data: {item_json}\n\n"
-            time.sleep(2)  # Simulate a delay to stream data every 2 seconds
+            # time.sleep()  # Simulate a delay to stream data every 2 seconds
     
     return Response(generate(), mimetype='text/event-stream')
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, threaded=True, use_reloader=False)
