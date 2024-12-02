@@ -25,7 +25,7 @@ except Exception as e:
 publisher = pubsub_v1.PublisherClient(credentials=credentials)
 
 topic_path = publisher.topic_path(project=projectid, topic=topicid)
-
+print("hello world")
 def publish_to_pubsub(data):
     data_str = json.dumps(data)
     data_bytes = data_str.encode('utf-8')
@@ -35,6 +35,7 @@ def publish_to_pubsub(data):
 
 
 print("Hello Everyone")
+print('Something Else')
 def subscribe_and_process_data():
     url = 'http://127.0.0.1:5000/stream-items'  # Flask API endpoint
     messages = 0
