@@ -35,6 +35,7 @@ def publish_to_pubsub(data):
 
 
 print("Hello Everyone")
+print('Something Else')
 def subscribe_and_process_data():
     url = 'http://127.0.0.1:5000/stream-items'  # Flask API endpoint
     messages = 0
