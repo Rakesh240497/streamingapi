@@ -25,7 +25,7 @@ except Exception as e:
 publisher = pubsub_v1.PublisherClient(credentials=credentials)
 
 topic_path = publisher.topic_path(project=projectid, topic=topicid)
-
+print("hello world")
 def publish_to_pubsub(data):
     data_str = json.dumps(data)
     data_bytes = data_str.encode('utf-8')
